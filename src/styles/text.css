@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #7a00e6;
+  --primary-color-light: #a700e6;
+  --primary-color-dark: #5c00d6;
+  --secondary-color: #ffffff;
+  --tertiary-color: #000000;
+  --background-color: rgba(122, 0, 230, 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 40px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  justify-content: center;
+  align-content: center;
+}
+
+.stats-grid-item {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-grid-item h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.stats-grid-item p {
+  font-size: 16px;
+  color: var(--tertiary-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.stats-grid-item h2 span {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--primary-color-light);
+  margin-left: 10px;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stats-grid-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.stats-grid-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(172, 19, 19, 0.4);
+}
+
+.stats-grid-item button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    float: right;
+  }
+
+  /* link participate-btn to poolpage.tsx */
+  .stats-grid-item button:hover {
+    background-color: var(--primary-color-dark);
+    color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
